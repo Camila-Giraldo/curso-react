@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Definición JSX
+Es una sintaxis la cual es una combinación de JS con HTML. Esto lo que permite es escribir código HTML dentro de JS sin muchas de las restricciones que estas contienen, donde al final todo esto se convertirá en JS puro. EJ: const element = <h1>Hello, world!</h1>;
