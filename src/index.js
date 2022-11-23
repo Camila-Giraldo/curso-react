@@ -2,12 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting";
 import Product, { Navbar } from "./Product";
+import { Button } from "./Button";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <UserCard
+    <Button text="Click me" />
+    <Button text="Pay" />
+    <Button text="Go to" name="Joe" />
+    {/*  <UserCard
       name="Ryan Ray"
       amount={3000}
       married={true}
@@ -26,6 +30,6 @@ root.render(
       greet={function () {
         alert("Hello");
       }}
-    />
+    /> */}
   </>
 );
