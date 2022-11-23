@@ -1,10 +1,22 @@
-// Los componentes de React siempre deben ser creados en otros archivos para diferenciarlos
-// del código JS puro. Adicionalmente, siempre deben ser declarados con mayúscula inicial.
-
-export function Greeting() {
-  return <h1>Componente de React</h1>;
+// Props en react son propiedades que puede tener el componente similar a los atributos de HTML
+export function Greeting({ title, name = "User" }) {
+  return (
+    <h1>
+      {title}, dice {name}
+    </h1>
+  );
 }
 
-export function UserCard() {
-  return <h1>User Card</h1>;
+export function UserCard({ name, amount, married, address, greet }) {
+  return (
+    <div>
+      <h1>{name}</h1>
+      <p>💲{amount}</p>
+      <p>{married ? "Casado" : "Soltero"}</p>
+      <ul>
+        <li>Ciudad: {address.city}</li>
+        <li>Calle: {address.street}</li>
+      </ul>
+    </div>
+  );
 }
