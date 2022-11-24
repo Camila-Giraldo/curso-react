@@ -1,9 +1,13 @@
 .card {
-  background: "#202020";
-  color: "#fff";
-  padding: "20px";
+  background: #202020;
+  color: #fff;
+  padding: 10px;
 }
 
-.titleStyles {
-  fontweight: "lighter";
+.bg-red {
+  background: red;
+}
+
+.bg-green {
+  background: green;
 }
