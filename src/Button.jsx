@@ -6,7 +6,9 @@ export function Button({ text, name}) {
   }
 
   return (
-    <button>
+    <button onClick={function () {
+      console.log('Hola Mundo')
+    }}>
       {text} - {name}
     </button>
   );
