@@ -1,3 +1,5 @@
+import { VscGlobe } from "react-icons/vsc";
+
 export const Posts = () => {
   return (
     <button
@@ -8,6 +10,7 @@ export const Posts = () => {
           .catch((error) => console.error(error));
       }}
     >
+      <VscGlobe />
       Traer datos
     </button>
   );
