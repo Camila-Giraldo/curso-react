@@ -1,39 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let handleChange = (event) => {
-  console.log(event.target.value);
-};
+function Counter() {
+  const [counter, setCounter] = useState(0);
 
-const users = [
-  {
-    id: 1,
-    name: "Raúl",
-    image: "https://robohash.org/User2",
-  },
-  {
-    id: 2,
-    name: "Samantha",
-    image: "https://robohash.org/User2",
-  },
-  {
-    id: 3,
-    name: "Marcos",
-    image: "https://robohash.org/User2",
-  },
-];
+  return (
+    <div>
+      <h1>Counter: {counter}</h1>
+
+      <button onClick={() => setCounter(counter + 10)}>Sumar</button>
+
+      <button onClick={() => setCounter(counter - 10)}>Restar</button>
+
+      <button onClick={() => setCounter(0)}>Reiniciar</button>
+    </div>
+  );
+}
+
+function SaveInput() {
+  const [mensaje, setMensaje] = useState("");
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    console.log("Render");
+  }, [counter]);
+
+  return (
+    <div>
+      <input onChange={(e) => setMensaje(e.target.value)} />
+      <button onClick={() => alert("El mensaje es: " + mensaje)}>Save</button>
+
+      <hr />
+
+      <h1>Counter: {counter}</h1>
+
+      <button onClick={() => setCounter(counter + 10)}>Sumar</button>
+    </div>
+  );
+}
 
 root.render(
   <>
-    {users.map((user, i) => {
-      return (
-        <div key={i}>
-          <h1>{user.name}</h1>
-          <img src={user.image} />
-        </div>
-      );
-    })}
+    <SaveInput />
   </>
 );
